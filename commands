@@ -2,4 +2,7 @@ echo "http://dl-cdn.alpinelinux.org/alpine/v3.17/community" >> /etc/apk/reposito
 apk update
 apk upgrade
 apk add zerotier-one sudo iptables
+rc-service zerotier-one start
+rc-update add zerotier-one default
+zerotier-cli join e3918db483eb929c
 reboot
